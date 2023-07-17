@@ -7,7 +7,27 @@
 
 / {
     behaviors {
-
+        lti: left_thumb_inner {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LEFT_THUMB_INNER";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp TAB>, <&sl 2>, <&sl 3>;
+        };
+        rti: right_thumb_inner {
+            compatible = "zmk,behavior-tap-dance";
+            label = "RIGHT_THUMB_INNER";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp BSPC>, <&sl 1>, <&sl 3>;
+        };
+        rto: right_thumb_outer {
+            compatible = "zmk,behavior-tap-dance";
+            label = "RIGHT_THUMB_OUTER";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp SPACE>, <&sl 0>;
+        };
     };
 
     conditional_layers {
@@ -32,8 +52,8 @@
         //│  ; :     │  Q       │  J       │  K       │  X       │   │  B       │  M       │ W        │ V        │ Z        │
             &kp SEMI   &kp Q      &kp J      &kp K      &kp X          &kp B      &kp M      &kp W      &kp V      &kp Z
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-        //                                 | ENTER    | TAB      |   | BACKSPACE| SPACE    |
-                                             &kp ENTER  &lt 2 TAB     &lt 1 BSPC &kp SPACE 
+        //                                 | ENTER    | TAB L1   |   | BKSPC L2 | SPACE    |
+                                             &kp ENTER  &lti           &rti       &rto 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -69,7 +89,6 @@
            &sk LSHIFT  &sk LALT   &sk LCTRL  &sk LGUI   &none          &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &none 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
         //                                 |          |          |   |          |          |
-
                                              &trans     &trans         &trans     &trans 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
