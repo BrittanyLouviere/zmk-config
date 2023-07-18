@@ -12,21 +12,21 @@
             label = "LEFT_THUMB_INNER";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp TAB>, <&sl 2>, <&sl 3>;
+            bindings = <&kp TAB>, <&sl 2>, <&to 2>;
         };
         rti: right_thumb_inner {
             compatible = "zmk,behavior-tap-dance";
             label = "RIGHT_THUMB_INNER";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp BSPC>, <&sl 1>, <&sl 3>;
+            bindings = <&kp BSPC>, <&sl 1>, <&to 1>;
         };
         rto: right_thumb_outer {
             compatible = "zmk,behavior-tap-dance";
             label = "RIGHT_THUMB_OUTER";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp SPACE>, <&sl 0>;
+            bindings = <&kp SPACE>, <&to 0>;
         };
     };
 
