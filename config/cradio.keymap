@@ -79,14 +79,14 @@
         left_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │ ALL      │ FIND     │ UNDO     │ REDO     │   │ F1       │ F2       │ F3       │ F4       │ F5       │
-            &none      &kp LC(A)  &kp LC(F)  &kp LC(Z)  &kp LC(Y)      &kp F1     &kp F2     &kp F3     &kp F4     &kp F5   
+        //│          │          │          │          │          │   │ F1       │ F2       │ F3       │ F4       │ F5       │
+            &none      &none      &none      &none      &none          &kp F1     &kp F2     &kp F3     &kp F4     &kp F5   
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ stky shft│ stky alt │ stky ctrl│ stky gui │ WIN SWTCH│   │ F6       │ F7       │ F8       │ F9       │ F10      │
-           &sk LSHIFT  &sk LALT   &sk LCTRL  &sk LGUI &kp LA(TAB)      &kp F6     &kp F7     &kp F8     &kp F9     &kp F10   
+        //│          │          │          │ stky gui │ WIN SWTCH│   │ F6       │ F7       │ F8       │ F9       │ F10      │
+            &none      &none      &none      &sk LGUI &kp LA(TAB)      &kp F6     &kp F7     &kp F8     &kp F9     &kp F10   
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │ CUT      │ COPY     │ PASTE    │ SAVE     │   │ F11      │ F12      │          │          │          │
-            &none      &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(S)      &kp F11    &kp F12    &none      &none      &none 
+        //│          │          │          │          │          │   │ F11      │ F12      │          │          │          │
+            &none      &none      &none      &none      &none          &kp F11    &kp F12    &none      &none      &none 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
         //                                 |          |          |   |          |          |
                                              &trans     &trans         &trans     &trans 
