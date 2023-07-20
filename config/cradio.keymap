@@ -26,7 +26,7 @@
             label = "RIGHT_THUMB_OUTER";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp SPACE>, <&to 0>;
+            bindings = <&mt LALT SPACE>, <&to 0>;
         };
     };
 
@@ -52,7 +52,7 @@
         //│  ; :     │  Q       │  J       │  K       │  X       │   │  B       │  M       │ W        │ V        │ Z        │
             &kp SEMI   &kp Q      &kp J      &kp K      &kp X          &kp B      &kp M      &kp W      &kp V      &kp Z
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-        //                                 |SHFT ENTE |CTR TAB L1|   | BKSPC L2 | SPACE    |
+        //                                 |SHFT ENTE |CTR TAB L1|   | BKSPC L2 | ALT SPACE|
                                         &mt LSHFT ENTER  &lti           &rti       &rto 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
