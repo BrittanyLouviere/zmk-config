@@ -12,7 +12,7 @@
             label = "LEFT_THUMB_INNER";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp TAB>, <&sl 2>, <&to 2>;
+            bindings = <&mt LCTRL TAB>, <&sl 2>, <&to 2>;
         };
         rti: right_thumb_inner {
             compatible = "zmk,behavior-tap-dance";
@@ -52,8 +52,8 @@
         //│  ; :     │  Q       │  J       │  K       │  X       │   │  B       │  M       │ W        │ V        │ Z        │
             &kp SEMI   &kp Q      &kp J      &kp K      &kp X          &kp B      &kp M      &kp W      &kp V      &kp Z
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-        //                                 | ENTER    | TAB L1   |   | BKSPC L2 | SPACE    |
-                                             &kp ENTER  &lti           &rti       &rto 
+        //                                 |SHFT ENTE |CTR TAB L1|   | BKSPC L2 | SPACE    |
+                                        &mt LSHFT ENTER  &lti           &rti       &rto 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
