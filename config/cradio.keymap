@@ -11,6 +11,10 @@
 #define TRI     3
 #define QWERTY  4
 
+&sl {
+    /delete-property/ quick-release;
+};
+
 / {
     behaviors {
         lti: left_thumb_inner {
