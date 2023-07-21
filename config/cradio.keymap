@@ -71,14 +71,14 @@
         right_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ INSERT   │ PAGE UP  │ UP       │ PAGE DN  │ HOME     │   │ / ?      │ 7 &      │ 8 *      │ 9 (      │ = +      │
-            &kp INS    &kp PG_UP  &kp UARW   &kp PG_DN  &kp HOME       &kp FSLH   &kp N7     &kp N8     &kp N9     &kp EQUAL 
+        //│ ESCAPE   │ PAGE UP  │ UP       │ PAGE DN  │ HOME     │   │ / ?      │ 7 &      │ 8 *      │ 9 (      │ = +      │
+            &kp ESC    &kp PG_UP  &kp UARW   &kp PG_DN  &kp HOME       &kp FSLH   &kp N7     &kp N8     &kp N9     &kp EQUAL 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ┼──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ DELETE   │ LEFT     │ DOWN     │ RIGHT    │ END      │   │ - _      │ 4 $      │ 5 %      │ 6 ^      │ . >      │
             &kp DEL    &kp LARW   &kp DARW   &kp RARW   &kp END        &kp MINUS  &kp N4     &kp N5     &kp N6     &kp DOT  
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ┼──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ CAPS     │ ESCAPE   │ \ |      │ [ {      │ ] }      │   │ 0 )      │ 1 !      │ 2 @      │ 3 #      │ ` ~      │
-           &caps_word  &kp ESC    &kp BSLH   &kp LBKT   &kp RBKT       &kp N0     &kp N1     &kp N2     &kp N3  &kp GRAVE    
+        //│ INSERT   │          │ \ |      │ [ {      │ ] }      │   │ 0 )      │ 1 !      │ 2 @      │ 3 #      │ ` ~      │
+            &kp INS    &none      &kp BSLH   &kp LBKT   &kp RBKT       &kp N0     &kp N1     &kp N2     &kp N3  &kp GRAVE    
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
         //                                 |          |          |   |          |          |
                                              &trans     &trans         &trans     &trans   
