@@ -77,8 +77,8 @@
         //│ DELETE   │ LEFT     │ DOWN     │ RIGHT    │ END      │   │ - _      │ 4 $      │ 5 %      │ 6 ^      │ . >      │
             &kp DEL    &kp LARW   &kp DARW   &kp RARW   &kp END        &kp MINUS  &kp N4     &kp N5     &kp N6     &kp DOT  
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ┼──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ INSERT   │          │ \ |      │ [ {      │ ] }      │   │ 0 )      │ 1 !      │ 2 @      │ 3 #      │ ` ~      │
-            &kp INS    &none      &kp BSLH   &kp LBKT   &kp RBKT       &kp N0     &kp N1     &kp N2     &kp N3  &kp GRAVE    
+        //│ INSERT   │ ` ~      │ \ |      │ [ {      │ ] }      │   │ 0 )      │ 1 !      │ 2 @      │ 3 #      │          │
+            &kp INS    &kp GRAVE  &kp BSLH   &kp LBKT   &kp RBKT       &kp N0     &kp N1     &kp N2     &kp N3     &none        
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
         //                                 |          |          |   |          |          |
                                              &trans     &trans         &trans     &trans   
