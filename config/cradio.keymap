@@ -17,23 +17,23 @@
 
 / {
     behaviors {
-        lti: left_thumb_inner {
+        lto: left_thumb_outer {
             compatible = "zmk,behavior-tap-dance";
-            label = "LEFT_THUMB_INNER";
+            label = "LEFT_THUMB_OUTER";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&mt LCTRL TAB>, <&sl LEFT>, <&to LEFT>;
         };
-        rti: right_thumb_inner {
+        rto: right_thumb_outer {
             compatible = "zmk,behavior-tap-dance";
-            label = "RIGHT_THUMB_INNER";
+            label = "RIGHT_THUMB_OUTER";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp BSPC>, <&sl RIGHT>, <&to RIGHT>;
         };
-        rto: right_thumb_outer {
+        rti: right_thumb_inner {
             compatible = "zmk,behavior-tap-dance";
-            label = "RIGHT_THUMB_OUTER";
+            label = "RIGHT_THUMB_INNER";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&mt LALT SPACE>, <&to DEFAULT>;
@@ -63,7 +63,7 @@
             &kp SEMI   &kp Q      &kp J      &kp K      &kp X          &kp B      &kp M      &kp W      &kp V      &kp Z
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
         //                                 |SHFT ENTE |CTR TAB L1|   | BKSPC L2 | ALT SPACE|
-                                        &mt LSHFT ENTER  &lti           &rti       &rto 
+                                             &lto    &mt LSHFT ENTER   &rti       &rto 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
