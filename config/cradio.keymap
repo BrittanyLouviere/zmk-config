@@ -49,14 +49,6 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        sys_layer {
-            if-layers = <NNL FL>;
-            then-layer = <SYS>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
         default_layer {
