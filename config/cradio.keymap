@@ -6,9 +6,9 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DEFAULT 0
-#define RIGHT   1
-#define LEFT    2
-#define TRI     3
+#define NNL     1
+#define FL      2
+#define SYS     3
 #define QWERTY  4
 
 &sl {
@@ -22,14 +22,14 @@
             label = "LEFT_THUMB_OUTER";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mt LCTRL TAB>, <&sl LEFT>, <&to LEFT>;
+            bindings = <&mt LCTRL TAB>, <&sl FL>, <&to FL>;
         };
         rto: right_thumb_outer {
             compatible = "zmk,behavior-tap-dance";
             label = "RIGHT_THUMB_OUTER";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp BSPC>, <&sl RIGHT>, <&to RIGHT>;
+            bindings = <&kp BSPC>, <&sl NNL>, <&to NNL>;
         };
         rti: right_thumb_inner {
             compatible = "zmk,behavior-tap-dance";
@@ -51,9 +51,9 @@
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <RIGHT LEFT>;
-            then-layer = <TRI>;
+        sys_layer {
+            if-layers = <NNL FL>;
+            then-layer = <SYS>;
         };
     };
 
@@ -66,7 +66,7 @@
             &kp SQT    &kp COMMA  &kp DOT    &kp P      &kp Y          &kp F      &kp G      &kp C      &kp R      &kp L 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  O       │  E       │  U       │  I       │   │  D       │  H       │  T       │  N       │ S        │
-            &kp A      &kp O     &lk LEFT E &lk RIGHT U &kp I          &kp D     &lk RIGHT H &lk LEFT T      &kp N      &kp S
+            &kp A      &kp O      &lk FL E   &lk NNL U  &kp I          &kp D      &lk NNL H  &lk FL T   &kp N      &kp S
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  ; :     │  Q       │  J       │  K       │  X       │   │  B       │  M       │ W        │ V        │ Z        │
             &kp SEMI   &kp Q      &kp J      &kp K      &kp X          &kp B      &kp M      &kp W      &kp V      &kp Z
@@ -77,13 +77,13 @@
             >;
         };
 
-        right_layer {
+        num_nav_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ ESCAPE   │ PAGE UP  │ UP       │ PAGE DN  │ HOME     │   │ / ?      │ 7 &      │ 8 *      │ 9 (      │ = +      │
             &kp ESC    &kp PG_UP  &kp UARW   &kp PG_DN  &kp HOME       &kp FSLH   &kp N7     &kp N8     &kp N9     &kp EQUAL 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ┼──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ DELETE   │ LEFT     │ DOWN     │ RIGHT    │ END      │   │ - _      │ 4 $      │ 5 %      │ 6 ^      │ . >      │
+        //│ DELETE   │ FL     │ DOWN     │ NNL    │ END      │   │ - _      │ 4 $      │ 5 %      │ 6 ^      │ . >      │
             &kp DEL    &kp LARW   &kp DARW   &kp RARW   &kp END        &kp MINUS  &kp N4     &kp N5     &kp N6     &kp DOT  
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ┼──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ INSERT   │ ` ~      │ \ |      │ [ {      │ ] }      │   │ 0 )      │ 1 !      │ 2 @      │ 3 #      │          │
@@ -95,7 +95,7 @@
             >;
         };
 
-        left_layer {
+        fun_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │          │          │          │   │ F1       │ F2       │ F3       │ F4       │ F5       │
@@ -113,7 +113,7 @@
             >;
         };
 
-        tri_layer {
+        sys_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬────────────┬────────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ RESET    │          │          │ PROFILE 3  │ PROFILE 0  │   │          │          │          │          │  RESET   │
