@@ -39,9 +39,9 @@
             bindings = <&mt LALT SPACE>, <&to DEFAULT>;
         };
 
-        mo_kp: mo_kp {
+        lk: layer_key {
             compatible = "zmk,behavior-hold-tap";
-            label = "mo_kp";
+            label = "LAYER_KEY";
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
@@ -66,7 +66,7 @@
             &kp SQT    &kp COMMA  &kp DOT    &kp P      &kp Y          &kp F      &kp G      &kp C      &kp R      &kp L 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  O       │  E       │  U       │  I       │   │  D       │  H       │  T       │  N       │ S        │
-            &kp A      &kp O      &kp E      &kp U   &mo_kp RIGHT I &mo_kp RIGHT D &kp H      &kp T      &kp N      &kp S
+            &kp A      &kp O     &lk LEFT E &lk RIGHT U &kp I          &kp D     &lk RIGHT H &lk LEFT T      &kp N      &kp S
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  ; :     │  Q       │  J       │  K       │  X       │   │  B       │  M       │ W        │ V        │ Z        │
             &kp SEMI   &kp Q      &kp J      &kp K      &kp X          &kp B      &kp M      &kp W      &kp V      &kp Z
