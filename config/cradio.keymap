@@ -22,14 +22,14 @@
             label = "LEFT_THUMB_OUTER";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mt LCTRL TAB>, <&sl FL>, <&to FL>;
+            bindings = <&mt LCTRL TAB>, <&to FL>;
         };
         rto: right_thumb_outer {
             compatible = "zmk,behavior-tap-dance";
             label = "RIGHT_THUMB_OUTER";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp BSPC>, <&sl NNL>, <&to NNL>;
+            bindings = <&kp BSPC>, <&to NNL>;
         };
         rti: right_thumb_inner {
             compatible = "zmk,behavior-tap-dance";
